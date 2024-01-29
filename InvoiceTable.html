@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!-- saved from url=(0040)http://127.0.0.1:5500/table/invoice.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/4598/4598376.png">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InvoiceTable</title>
+</head>
+<body>
+    
+    <table border="2" cellspacing="0" cellpadding="10">
+
+        <tbody><tr>
+            <th>Item</th>
+            <th>qty</th>
+            <th>@</th>
+            <th>Price</th>
+        </tr>
+
+        <tr>
+            <td>paper clips</td>
+            <td>100</td>
+            <td>1.15</td>
+            <td>115</td>
+        </tr>
+
+        <tr>
+            <td>paper case</td>
+            <td>10</td>
+            <td>45.99</td>
+            <td>459</td>
+        </tr>
+
+        <tr>
+            
+                <td>wastepaper</td>
+                <td>2</td>
+                <td>17.99</td>
+                <td>35.98</td>
+            
+        </tr>
+
+        <tr>
+            <td colspan="3">subtotal</td>
+            <td>610.88</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">tax</td>
+            <td>7%</td>
+            <td>42.76</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">total</td>
+            <td>653.64</td>
+        </tr>
+
+    </tbody></table>
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
